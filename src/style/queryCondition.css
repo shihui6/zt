@@ -1,0 +1,51 @@
+.queryCondition-top {
+  position: relative;
+  width: 100%;
+  border-bottom: 2px solid #797979;
+}
+.queryCondition-top .queryCondition-title {
+  font-size: 24px;
+}
+.queryCondition-top .queryConditionType {
+  font-weight: 700;
+}
+.queryCondition-top .middle {
+  width: 120%;
+  margin-bottom: 13px;
+}
+.queryCondition-top .middle > div {
+  float: left;
+  margin-top: 20px;
+}
+.queryCondition-top .middle input {
+  width: 109px;
+  height: 25px;
+  font: 400 13px/25px Arial;
+  border: 1px solid #797979;
+  /* vertical-align: bottom; */
+
+}
+.queryCondition-top .middle .queryBtn {
+  position: relative;
+  margin-left: 54px;
+}
+.queryCondition-top .middle .queryBtn span {
+  display: inline-block;
+  width: 60px;
+  height: 30px;
+  text-align: center;
+  color: #fff;
+  font: 400 16px/30px Arial;
+  cursor: pointer;
+  border-radius: 5px;
+  background-color: #C82C37;
+}
+.queryCondition-top::after {
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  content: "";
+  width: 100px;
+  height: 2px;
+  background-color: #f00;
+}

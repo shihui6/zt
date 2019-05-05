@@ -1,0 +1,54 @@
+.di-header__dropdown-idep > li {
+    display: block
+}
+
+.di-header__dropdown-idep > li > a {
+    display: block;
+    height: 30px;
+    width: 108px;
+    line-height: 30px;
+    text-align: left;
+    padding-left: 20px;
+    color: #333;
+    font-size: 14px;
+    text-decoration: none
+}
+
+.di-header__dropdown-idep > li > a:hover {
+    background: #eee
+}
+
+.di-header__dropdown-idep {
+    position: fixed;
+    margin: 0;
+    padding: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    padding: 20px 0;
+    z-index: 6;
+    overflow: hidden;
+    width: 0;
+    height: auto;
+    transition: width .35s ease-out, visibility .35s ease-out;
+    -moz-transition: width .35s ease-out, visibility .35s ease-out;
+    -webkit-transition: width .35s ease-out, visibility .35s ease-out;
+    background: #fff;
+    box-shadow: 0 2px 8px 0 rgba(0, 0, 0, .3);
+    -webkit-box-shadow: 0 2px 8px 0 rgba(0, 0, 0, .3);
+    -moz-box-shadow: 0 2px 8px 0 rgba(0, 0, 0, .3)
+}
+
+.di-header__dropdown-idep > li > a {
+    font-size: 12px;
+    width: 180px;
+    height: 40px;
+    line-height: 40px
+}
+
+.di-header__dropdown-idep.active {
+    opacity: 1;
+    visibility: visible;
+    width: 180px;
+    overflow-y: auto
+}

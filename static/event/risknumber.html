@@ -1,0 +1,162 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+  <link rel="shortcut icon" href="favicon.ico">
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <title>同一证券一年内不同风险数目统计</title>
+  <meta name="author" content="zts ued team" />
+  <meta name="keywords" content="信用业务部" />
+  <meta name="description" content="信用业务部" />
+  <link rel="stylesheet" type="text/css" href="res/css/iconfont.css" />
+  <link rel="stylesheet" type="text/css" href="res/css/base.css" />
+  <link rel="stylesheet" type="text/css" href="res/css/main.css" />
+  <link rel="stylesheet" href="res/css/jquery-editable-select.min.css" />
+  <link rel="stylesheet" type="text/css" href="./yuqing/hbase_2df540f.css">
+  <link rel="stylesheet" type="text/css" href="./yuqing/entry_9a95f3e.css">
+  <link rel="stylesheet" href="res/css/jquery-ui.min.css" />
+  <link rel="stylesheet" href="res/css/font-awesome.min.css" />
+  <link rel="stylesheet" href="./res/css/selectpage.css" type="text/css">
+  <link rel="stylesheet" href="./res/my-css/credit.css" type="text/css">
+  <script>
+    var _hmt = _hmt || [];
+    (function () {
+      var hm = document.createElement("script");
+      hm.src = "https://hm.baidu.com/hm.js?e2a5768dffb8068cf4d5a94403985b08";
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(hm, s);
+    })();
+
+  </script>
+</head>
+
+<body>
+
+  <!--[if lt IE 9]>
+<script type="text/javascript" src="res/js/core/json2.js"></script>
+<![endif]-->
+
+  <!--[if lt IE 9]>
+<script type="text/javascript" src="res/js/core/respond.js"></script>
+<![endif]-->
+  <div class="di-header">
+    <div id="_versionType" data-name="noSelect" style="display:none"></div>
+    <a href="/static/event/credit.html" class="tj-logo-wrapper">
+      <img src="./img/logo.png">
+    </a>
+    <div class="di-header__middle">
+      <a href="/" class="di-header__middle-btn">首页</a>
+      <div class="di-header__middle-btn product_btn">
+        <span>舆情平台</span>
+        <ul class="di-header__middle-dropdown product_dropdown">
+          <li>
+            <a href="./trust.html">托管业务版</a>
+          </li>
+          <li>
+            <a href="./credit.html">信用业务版</a>
+          </li>
+        </ul>
+      </div>
+      <div class="di-header__middle-btn product_btn">
+        <span>帮助文档</span>
+        <ul class="di-header__middle-dropdown product_dropdown">
+          <li>
+            <a href="./hosting.html">托管信息详情</a>
+          </li>
+          <li>
+            <a href="./creditText.html">信用信息详情</a>
+          </li>
+        </ul>
+      </div>
+      <!--<a href="faq.html" class="di-header__middle-btn">帮助文档</a>-->
+    </div>
+  </div>
+  <div class="warper" id="warper">
+    <h1 class="zhongtai">中泰证券舆情分析系统</h1>
+    <div class="mp-header">
+      <!-- <div class="name" id="name">中泰证券舆情分析系统:信用信息分析</div> -->
+      <!--<span class="name" id="name">个股_历史新闻查询系统</span>-->
+      <i class="no" id="custid"></i>
+      <div class="mt-chart-search center">
+        <div class="box">
+          <div>
+            <span class="label">开始日期：</span>
+            <input type="text" class="text w1 calendar" id="month_start" readonly="readonly" />
+          </div>
+          <div>
+            <span class="label">结束日期：</span>
+            <input type="text" class="text w1 calendar" id="month_stop" readonly="readonly" />
+          </div>
+          <div class="mt60">
+            <a class="mt-search-button red" id="btnSelect">查询</a>
+          </div>
+          <div class="mt30">
+            <a class="mt-search-button red" id="btnExport">导出</a>
+          </div>
+          <div class="mt30">
+            <a class="mt-search-button red" href="/static/event/credit.html">返回</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="mar-left-20 mar-right-20 pad-bottom-20">
+      <div class="mp-contents">
+        <table class="mp-chart-table">
+          <thead>
+            <tr>
+              <th style="width: 150px;">证券代码</th>
+              <th style="width: 150px;">证券名称</th>
+              <th style="width: 150px;">风险类型</th>
+            </tr>
+          </thead>
+          <tbody id="detailData">
+          </tbody>
+        </table>
+        <div class="ui-page-item">
+          <div class="ui-public-page hide" id="_page_"></div>
+        </div>
+      </div>
+    </div>
+
+    <div style="height: 100px;" class="clear"></div>
+
+  </div>
+  <div class="di-footer">
+    <div class="main-container">
+      <div class="di-footer__unit">
+        <span class="mar-left-10">市场有风险，投资需谨慎</span>
+        <p class="right align-right">© 2015-2019 zts.com.cn. All Rights Reserved.</p>
+      </div>
+    </div>
+  </div>
+  <!-- public JS start -->
+  <!--<script type="text/javascript" src="res/js/core/jquery-1.7.2.min.js"></script>-->
+  <script type="text/javascript" src="res/js/core/jquery-1.10.js"></script>
+  <script type="text/javascript" src="res/js/core/jquery.easing.1.3.js"></script>
+  <script type="text/javascript" src="res/js/core/jquery.mousewheel.min.js"></script>
+  <script type="text/javascript" src="res/js/common/fx.common.js"></script>
+  <script type="text/javascript" src="res/js/common/fx.font.js"></script>
+  <script type="text/javascript" src="res/js/common/ui/fx.waiting.js"></script>
+  <script type="text/javascript" src="res/js/common/ui/fx.status.js"></script>
+  <script type="text/javascript" src="res/js/common/ui/fx.select.js"></script>
+  <script type="text/javascript" src="res/js/common/ui/fx.scroll.js"></script>
+  <script type="text/javascript" src="res/js/common/ui/fx.city.query.js"></script>
+  <script type="text/javascript" src="res/js/common/ui/fx.calendar.2.0.0.js"></script>
+  <script type="text/javascript" src="res/js/common/ui/fx.page2.js"></script>
+  <script type="text/javascript" src="res/js/common/ui/fx.drag.js"></script>
+  <script type="text/javascript" src="res/js/common/ui/fx.dialog.js"></script>
+  <script type="text/javascript" src="res/js/core/jquery-editable-select.min.js"></script>
+  <script type="text/javascript" src="res/js/core/jquery-ui.min.js"></script>
+  <!-- public JS stop -->
+  <!-- <script src="./jquery.pagination.js"></script> -->
+
+  <!-- page JS start -->
+  <script type="text/javascript" src="./res/js/core/selectpage.min.js"></script>
+  <script type="text/javascript" src="./res/js/core/b.selectpage.js"></script>
+  <script type="text/javascript" src="res/js/page/fx.risknumber.js"></script>
+  <!-- page JS stop -->
+
+</body>
+
+</html>

@@ -1,0 +1,466 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+  <link rel="shortcut icon" href="favicon.ico">
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <title>信用业务部</title>
+  <meta name="author" content="zts ued team" />
+  <meta name="keywords" content="信用业务部" />
+  <meta name="description" content="信用业务部" />
+  <link rel="stylesheet" type="text/css" href="res/css/iconfont.css" />
+  <link rel="stylesheet" type="text/css" href="res/css/base.css" />
+  <link rel="stylesheet" type="text/css" href="res/css/main.css" />
+  <link rel="stylesheet" href="res/css/jquery-editable-select.min.css" />
+  <link rel="stylesheet" type="text/css" href="./yuqing/hbase_2df540f.css">
+  <link rel="stylesheet" type="text/css" href="./yuqing/entry_9a95f3e.css">
+  <link rel="stylesheet" href="res/css/jquery-ui.min.css" />
+  <link rel="stylesheet" href="res/css/font-awesome.min.css" />
+  <link rel="stylesheet" href="./res/css/selectpage.css" type="text/css">
+  <link rel="stylesheet" href="./res/my-css/paging.css">
+  <link rel="stylesheet" href="./res/my-css/credit.css" type="text/css">
+  <script>
+    var _hmt = _hmt || [];
+    (function () {
+      var hm = document.createElement("script");
+      hm.src = "https://hm.baidu.com/hm.js?e2a5768dffb8068cf4d5a94403985b08";
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(hm, s);
+    })();
+
+  </script>
+</head>
+
+<body>
+
+  <!--[if lt IE 9]>
+<script type="text/javascript" src="res/js/core/json2.js"></script>
+<![endif]-->
+
+  <!--[if lt IE 9]>
+<script type="text/javascript" src="res/js/core/respond.js"></script>
+<![endif]-->
+  <div class="di-header">
+    <div id="_versionType" data-name="noSelect" style="display:none"></div>
+    <a href="/" class="tj-logo-wrapper">
+      <img src="./img/logo.png">
+    </a>
+    <span class="yuqingfenxi"><a href="/" class="yuqingfen">舆情分析系统</a></span>
+    <!-- <a href="/" class="credit_home" >首页</a> -->
+    <div class="di-header__middle">
+      <a href="/" class="di-header__middle-btn">首页</a>
+      <div class="di-header__middle-btn product_btn">
+        <span>舆情平台</span>
+        <ul class="di-header__middle-dropdown product_dropdown">
+          <li>
+            <a href="./trust.html">托管业务版</a>
+          </li>
+          <li>
+            <a href="./credit.html">信用业务版</a>
+          </li>
+        </ul>
+      </div>
+      <div class="di-header__middle-btn product_btn">
+        <span>帮助文档</span>
+        <ul class="di-header__middle-dropdown product_dropdown">
+          <li>
+            <a href="./hosting.html">托管信息详情</a>
+          </li>
+          <li>
+            <a href="./creditText.html">信用信息详情</a>
+          </li>
+        </ul>
+      </div>
+      <!--<a href="faq.html" class="di-header__middle-btn">帮助文档</a>-->
+    </div>
+  </div>
+  <div class="name">
+      <span class="notice_dan">公告、风险类型</span> /
+      <span class="stock_pool">标的证券池</span>
+  </div>
+  <div class="warper" id="warper">
+    <!-- <h1>中泰证券舆情分析系统</h1> -->
+    <div class="mp-header">
+      <!-- <div class="name">
+          <span class="notice_dan">公告、风险类型</span> /
+          <span class="stock_pool">标的证券池</span>
+      </div> -->
+     
+      <a class="mygz" href="/static/event/risknumber.html" ;>风险关注</a>
+      <!--<span class="name" id="name">个股_历史新闻查询系统</span>-->
+      <i class="no" id="custid"></i>
+      <div class="mt-chart-search">
+        <div class="box">
+          <!-- <div class="risk">
+            <span class="label">&nbsp;&nbsp;&nbsp;关键词：</span>
+            <input type="text" id="keyword" onchange="check()" />
+          </div> -->
+          <div>
+            <span class="label">资产类型：</span>
+            <input id="assets_Code" type="text" />
+            <ul class="assets_code_data">
+            </ul>
+          </div>
+          <div class="assets">
+            <span class="label">证券名称或代码：</span>
+            <input id="Stock_Info" type="text" class="stock_code" />
+          </div>
+          <div>
+            <span class="label">开始日期：</span>
+            <input type="text" class="text w1 calendar" id="month_start" readonly="readonly" />
+          </div>
+          <div>
+            <span class="label">结束日期：</span>
+            <input type="text" class="text w1 calendar" id="month_stop" readonly="readonly" />
+          </div>
+          <div class="check">
+            <span>标注状态: </span>
+            <input type="checkbox" id="myCheck">
+            <label for="myCheck"></label>
+          </div>
+          <div>
+            <a class="mt-search-button red" id="btnSelect">查询</a>
+          </div>
+          <!--<div>-->
+          <!--<a href="javascript:;" class="mt-search-button red" id="btnExport">导出为CSV</a>-->
+          <!--</div>-->
+          <div>
+            <a class="mt-search-button red" id="advancedSearch">高级搜索</a>
+          </div>
+        </div>
+        <div class="searchShow">
+          <div class="risk">
+            <span class="label">&nbsp;&nbsp;&nbsp;关键词：</span>
+            <input type="text" id="keyword" />
+          </div>
+          <!-- <div>
+            <span class="label">资产类型：</span>
+            <input id="assets_Code" type="text" />
+            <ul class="assets_code_data">
+            </ul>
+          </div> -->
+          <div>
+            <span class="label">公告来源：</span>
+            <input id="announcement_Code" type="text" />
+            <ul class="announcement_code_data">
+            </ul>
+          </div>
+          <!-- <div>
+            <span class="label">市场类型：</span>
+            <input id="market_Code" type="text" />
+            <ul class="market_code_data"></ul>
+          </div> -->
+          <div class="report_public">
+            <span class="label">公告类型：</span>
+            <input id="public_Code" type="text" />
+          </div>
+          <div class="risk">
+            <span class="label">风险类型：</span>
+            <input id="Risk_Type" type="text" />
+            <ul class="risk_type_data">
+            </ul>
+          </div>
+          <!-- <div class="report_public">
+            <span class="label">风险类型：</span>
+            <input id="risk_Type" type="text" />
+          </div> -->
+        </div>
+      </div>
+    </div>
+    <div class="mar-left-20 mar-right-20 pad-bottom-20">
+
+      <div class="mp-contents">
+
+        <table class="mp-chart-table">
+          <thead>
+            <tr>
+              <th style="width: 150px;">公告日期</th>
+              <th style="width: 200px;">证券名称</th>
+              <th style="width: 500px;">公告标题</th>
+              <th style="width: 10%;">公告类型</th>
+              <th style="width: 200px;">风险类型</th>
+              <th style="width: 10%;">公告来源</th>
+              <th style="width: 200px;">风险类型信息统计</th>
+            </tr>
+          </thead>
+          <tbody id="detailData">
+          </tbody>
+        </table>
+        <div class="ui-page-item">
+          <div class="ui-public-page hide" id="_page_"></div>
+        </div>
+      </div>
+    </div>
+
+    <div style="height: 100px;" class="clear"></div>
+
+  </div>
+
+  <!-- 标的证券池部分 -->
+  <div class="stock_p" style="display:none">
+    <span class="annodRemind">* 每月第5个交易日定期更新</span>
+    <div class="group_type">
+      <div class="marginbond triger">融资融券标的证券</div>
+      <div class="bond">可冲抵保证金证券</div>
+    </div>
+
+    <!-- 这下面写的融资融券标的证券和可冲抵保证金证券表格 -->
+    <div class="stock_table">
+      <div class="stock_table_one">
+        <span class="stock_table_title">融资融券标的证券</span>
+        <div class="mt-chart-search">
+          <div class="box">
+            <!-- <div class="risk">
+                    <span class="label">&nbsp;&nbsp;&nbsp;关键词：</span>
+                    <input type="text" id="keyword" onchange="check()" />
+                  </div> -->
+            <div>
+              <span class="label">日期：</span>
+              <input type="text" class="text w1 calendar" id="month_start_two" readonly="readonly" />
+            </div>
+            <div>
+              <span class="label">至：</span>
+              <input type="text" class="text w1 calendar" id="month_stop_two" readonly="readonly" />
+            </div>
+            <!-- <div>
+              <span class="label">资产类型：</span>
+              <input id="assets_Code" type="text" />
+              <ul class="assets_code_data">
+              </ul>
+            </div> -->
+            <div class="assets">
+              <span class="label">证券代码：</span>
+              <input id="Security_name" type="text" class="stock_code" />
+            </div>
+            <div class="select_down">
+              <span>证券公司名称：</span>
+              <select name="" id="select_down_title"> 
+                <option value="全部">全部</option>
+                <option value="中信证券">中信证券</option>
+                <option value="华泰证券">华泰证券</option>
+                <option value="广发证券">广发证券</option>
+                <option value="国泰君安">国泰君安</option>
+                <option value="中国银河">中国银河</option>
+                <option value="招商证券">招商证券</option>
+                <option value="中信建投">中信建投</option>
+                <option value="国信证券">国信证券</option>
+                <option value="申万宏源">申万宏源</option>
+                <option value="光大证券">光大证券</option>
+                <option value="安信证券">安信证券</option>
+                <!-- <option value="中泰证券">中泰证券</option> -->
+              </select>
+            </div>
+            <div class="mt30">
+              <a class="mt-search-button red" id="finance_btnSelect">查询</a>
+            </div>
+            <div class="mt30">
+              <a class="mt-search-button red" id="export">导出</a>
+            </div>
+          </div>
+            <div class=" mar-right-20 pad-bottom-20">
+            
+              <div class="mp-contents">
+            
+                <table class="mp-chart-table" id ='table'>
+                  <thead>
+                    <tr>
+                      <th style="width: 150px;">市场</th>
+                      <th style="width: 200px;">证券代码</th>
+                      <th style="width: 180px;">证券简称</th>
+                      <th style="width: 10%;">融资保证金比</th>
+                      <th style="width: 200px;">融券保证金比</th>
+                      <th style="width: 200px">可融资状态</th>
+                      <th style="width: 200px">可融券状态</th>
+                      <th style="width: 10%;">日期</th>
+                      <th style="width: 200px;">证券公司名称</th>
+                    </tr>
+                  </thead>
+                  <tbody id="detailData_two">
+
+                  </tbody>
+                </table>
+                <!-- 分页结构 -->
+                <div class="pagger-box pagger" id="box"></div>
+              </div>
+            </div>
+      </div>
+    </div>
+
+    
+
+    <!-- 可冲抵保证金证券 -->
+    <div class="security" style='display:none'>
+      <span class="security_title">可冲抵保证金证券</span>
+        <div class="mt-chart-search">
+          <div class="box">
+            <!-- <div class="risk">
+                            <span class="label">&nbsp;&nbsp;&nbsp;关键词：</span>
+                            <input type="text" id="keyword" onchange="check()" />
+                          </div> -->
+            <div>
+              <span class="label">日期：</span>
+              <input type="text" class="text w1 calendar" id="month_start_three" readonly="readonly" />
+            </div>
+            <div>
+              <span class="label">至：</span>
+              <input type="text" class="text w1 calendar" id="month_stop_three" readonly="readonly" />
+            </div>
+            <!-- <div>
+                      <span class="label">资产类型：</span>
+                      <input id="assets_Code" type="text" />
+                      <ul class="assets_code_data">
+                      </ul>
+                    </div> -->
+            <div class="assets">
+              <span class="label">证券代码：</span>
+              <input id="Security_name_two" type="text" class="stock_code" />
+            </div>
+            <div class="select_down">
+              <span>证券公司名称：</span>
+              <select name="" id="select_down_title_two">
+                <option value="全部">全部</option>
+                <option value="中信证券">中信证券</option>
+                <option value="华泰证券">华泰证券</option>
+                <option value="广发证券">广发证券</option>
+                <option value="国泰君安">国泰君安</option>
+                <option value="中国银河">中国银河</option>
+                <option value="招商证券">招商证券</option>
+                <option value="中信建投">中信建投</option>
+                <option value="国信证券">国信证券</option>
+                <option value="申万宏源">申万宏源</option>
+                <option value="光大证券">光大证券</option>
+                <option value="安信证券">安信证券</option>
+                <!-- <option value="中泰证券">中泰证券</option> -->
+              </select>
+            </div>
+
+            <div class="mt30">
+              <a class="mt-search-button red" id="finance_btnSelect_two">查询</a>
+            </div>
+            <!--<div>-->
+            <!--<a href="javascript:;" class="mt-search-button red" id="btnExport">导出为CSV</a>-->
+            <!--</div>-->
+            <div class="mt30">
+              <a class="mt-search-button red" id="export_two">导出</a>
+            </div>
+          </div>
+        
+          <div class=" mar-right-20 pad-bottom-20">
+        
+            <div class="mp-contents">
+        
+              <table class="mp-chart-table" id = 'table_two'>
+                <thead>
+                  <tr>
+                    <th style="width: 200px;">市场</th>
+                    <th style="width: 200px;">证券代码</th>
+                    <th style="width: 240px;">证券简称</th>
+                    <th style="width: 10%;">折算率</th>
+                    <th style="width: 200px;">日期</th>
+                    <th style="width: 10%;">证券公司名称</th>
+                  </tr>
+                </thead>
+                <tbody id="detailData_three">
+        
+                </tbody>
+              </table>
+                <div class="pagger-box pagger" id="box_one"></div>
+            </div>
+          </div>
+        </div>
+    </div>
+  </div>
+  </div>
+
+  <div class="di-footer">
+    <div class="main-container">
+      <div class="di-footer__unit">
+        <span class="market_fenxian  mar-left-10">市场有风险，投资需谨慎</span>
+        <p class="market_fenxian right align-right">© 2015-2019 zts.com.cn. All Rights Reserved.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="cover" style="display: none"></div>
+  <div class="alert" style="display: none">
+    <div class="cont alerttext">
+    </div>
+  </div>
+  <!-- public JS start -->
+  <!--<script type="text/javascript" src="res/js/core/jquery-1.7.2.min.js"></script>-->
+  <script type="text/javascript" src="res/js/core/jquery-1.10.js"></script>
+  <script type="text/javascript" src="res/js/core/jquery.easing.1.3.js"></script>
+  <script type="text/javascript" src="res/js/core/jquery.mousewheel.min.js"></script>
+  <script type="text/javascript" src="res/js/common/fx.common.js"></script>
+  <script type="text/javascript" src="res/js/common/fx.font.js"></script>
+  <script type="text/javascript" src="res/js/common/ui/fx.waiting.js"></script>
+  <script type="text/javascript" src="res/js/common/ui/fx.status.js"></script>
+  <script type="text/javascript" src="res/js/common/ui/fx.select.js"></script>
+  <script type="text/javascript" src="res/js/common/ui/fx.scroll.js"></script>
+  <script type="text/javascript" src="res/js/common/ui/fx.city.query.js"></script>
+  <script type="text/javascript" src="res/js/common/ui/fx.calendar.2.0.0.js"></script>
+  <script type="text/javascript" src="res/js/common/ui/fx.page2.js"></script>
+  <script type="text/javascript" src="res/js/common/ui/fx.drag.js"></script>
+  <script type="text/javascript" src="res/js/common/ui/fx.dialog.js"></script>
+  <script type="text/javascript" src="res/js/core/jquery-editable-select.min.js"></script>
+  <script type="text/javascript" src="res/js/core/jquery-ui.min.js"></script>
+  <!-- public JS stop -->
+  <!-- <script src="./jquery.pagination.js"></script> -->
+
+  <!-- page JS start -->
+  <script type="text/javascript" src="./res/js/core/selectpage.min.js"></script>
+  <script type="text/javascript" src="./res/js/core/b.selectpage.js"></script>
+  <script type="text/javascript" src="./res/js/common/template-web.js"></script>
+  <script  src="./res/js/common/paging.js"></script>
+  <script type="text/javascript" src="res/js/page/fx.credit.js"></script>
+
+  <!-- page JS stop -->
+  <script type="text/javascript">
+    window.onload = function () {
+      $("#Stock_Info_text").val("");
+      if (window.name != "credit") {
+        location.reload();
+        window.name = "credit";
+      } else {
+        window.name = "";
+      }
+    }
+
+  </script>
+  <script id="test" type="text/html">
+    {{each resultlist as value i }}
+      <tr>
+        <td>{{value.trademarket}}</td>
+        <td>{{value.securitycode}}</td>
+        <td>{{value.securityname}}</td>
+        <td>{{value.zq_rzbl}}</td>
+        <td>{{value.zq_rqbl}}</td>
+        <td>{{value.rz_status}}</td>
+        <td>{{value.rq_status}}</td>
+        <td>{{value.zq_datetime}}</td>
+        <td>{{value.companyname}}</td>
+      </tr>      
+    {{/each}}
+  </script>
+  <script id='test_one' type='text/html'>
+      {{each resultlist as value i }}
+      <tr>
+        <td>{{value.trademarket}}</td>
+        <td>{{value.securitycode}}</td>
+        <td>{{value.securityname}}</td>
+        <td>{{value.zq_lv}}</td>
+        <td>{{value.zq_datetime}}</td>
+        <td>{{value.companyname}}</td>
+      </tr>      
+    {{/each}}
+  </script>
+  <style>
+    /* tr td:nth-child(3) {
+      text-align: left !important;
+    } */
+
+  </style>
+</body>
+
+</html>

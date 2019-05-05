@@ -1,0 +1,635 @@
+.uc-common-login #common-login {
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+    font-size: 12px;
+    padding: 40px 40px 30px;
+    background-color: #fff;
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none;
+    width: 260px;
+    color: #666
+}
+
+.uc-common-login #common-login h2 {
+    display: none
+}
+
+.uc-common-login #common-login .pass-form, .uc-common-login #common-login .pass-form-item-submit, .uc-common-login #common-login .tang-pass-login {
+    background-color: #fff;
+    margin: 0
+}
+
+.uc-common-login #common-login .pass-form {
+    padding-top: 24px
+}
+
+.uc-common-login #common-login .pass-form .pass-form-item-memberPass, .uc-common-login #common-login .pass-form label {
+    display: none
+}
+
+.uc-common-login #common-login .tang-pass-login {
+    width: 260px
+}
+
+.uc-common-login #common-login .login-shadow, .uc-common-login #common-login .watermark {
+    display: none
+}
+
+.uc-common-login #common-login a {
+    color: #666
+}
+
+.uc-common-login #common-login .change-login {
+    background-color: #fff
+}
+
+.uc-common-login #common-login .change-login > div {
+    width: 100%;
+    position: static
+}
+
+.uc-common-login #common-login .change-login a {
+    padding: 0;
+    margin: 0;
+    border: 0;
+    text-align: center;
+    display: inline-block;
+    width: 50%;
+    font-size: 18px;
+    height: auto;
+    padding-bottom: 15px;
+    border-bottom: 1px solid #dcdcdc;
+    color: #999;
+    line-height: 1;
+    cursor: pointer
+}
+
+.uc-common-login #common-login .change-login a:hover {
+    color: #333
+}
+
+.uc-common-login #common-login .change-login a.select {
+    border-bottom-color: #0063ff;
+    color: #333
+}
+
+.uc-common-login #common-login .change-login a span {
+    display: none
+}
+
+.uc-common-login #common-login .pass-smsSwitchWrapper {
+    text-align: right;
+    font-size: 12px;
+    margin-bottom: 14px;
+    line-height: 1
+}
+
+.uc-common-login #common-login .login-info .account, .uc-common-login #common-login .login-info .password, .uc-common-login #common-login .pass-form-item-password, .uc-common-login #common-login .pass-form-item-userName, .uc-common-login #common-login .pass-text-input-smsPhone, .uc-common-login #common-login .pass-text-input-smsVerifyCode, .uc-common-login #common-login .pass-text-input-verifyCode {
+    height: 40px;
+    border: 1px solid #dcdcdc;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+    margin: 0 0 10px;
+    width: 260px
+}
+
+.uc-common-login #common-login .login-info .account .safe-input, .uc-common-login #common-login .login-info .password .safe-input, .uc-common-login #common-login .pass-form-item-password .safe-input, .uc-common-login #common-login .pass-form-item-userName .safe-input, .uc-common-login #common-login .pass-text-input-smsPhone .safe-input, .uc-common-login #common-login .pass-text-input-smsVerifyCode .safe-input, .uc-common-login #common-login .pass-text-input-verifyCode .safe-input {
+    margin: 0;
+    height: 100%
+}
+
+.uc-common-login #common-login .login-info .account input, .uc-common-login #common-login .login-info .password input, .uc-common-login #common-login .pass-form-item-password input, .uc-common-login #common-login .pass-form-item-userName input, .uc-common-login #common-login .pass-text-input-smsPhone input, .uc-common-login #common-login .pass-text-input-smsVerifyCode input, .uc-common-login #common-login .pass-text-input-verifyCode input {
+    height: 38px;
+    line-height: 38px;
+    padding: 0 !important;
+    margin-left: 10px;
+    width: 240px;
+    font-size: 14px;
+    color: #333
+}
+
+.uc-common-login #common-login .pass-form-item-verifyCode {
+    margin: 0
+}
+
+.uc-common-login #common-login .pass-text-input-smsPhone {
+    width: 240px;
+    padding: 0 10px
+}
+
+.uc-common-login #common-login .pass-text-input-smsVerifyCode {
+    width: 120px;
+    padding-left: 10px
+}
+
+.uc-common-login #common-login .pass-item-time-timing, .uc-common-login #common-login .pass-item-timer {
+    width: 120px;
+    height: 42px;
+    line-height: 42px;
+    border: 0;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+    background-color: #eee;
+    margin-left: 8px;
+    padding: 0;
+    color: #333
+}
+
+.uc-common-login #common-login .token {
+    margin-bottom: 10px
+}
+
+.uc-common-login #common-login .token #uc-common-token {
+    height: 40px;
+    border: 1px solid #dcdcdc;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+    padding: 0 10px;
+    width: 110px;
+    font-size: 14px
+}
+
+.uc-common-login #common-login .token img {
+    height: 40px;
+    width: 70px;
+    border: 0
+}
+
+.uc-common-login #common-login .token a {
+    line-height: 40px;
+    margin: 0 0 0 8px
+}
+
+.uc-common-login #common-login .pass-form-item-verifyCode .pass-text-input-verifyCode {
+    height: 40px;
+    border: 1px solid #dcdcdc;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+    padding: 0 10px;
+    width: 110px
+}
+
+.uc-common-login #common-login .pass-form-item-verifyCode img {
+    height: 40px;
+    width: 70px;
+    border: 0
+}
+
+.uc-common-login #common-login .pass-form-item-verifyCode a {
+    line-height: 40px;
+    margin: 0 0 0 8px
+}
+
+.uc-common-login #common-login #uc-login {
+    margin: 0;
+    background: #fff
+}
+
+.uc-common-login #common-login #uc-login .login-info {
+    padding: 0
+}
+
+.uc-common-login #common-login #uc-login .login-info .account span, .uc-common-login #common-login #uc-login .login-info .password span {
+    display: none
+}
+
+.uc-common-login #common-login #uc-login .error {
+    height: auto;
+    display: none;
+    color: #e73828;
+    font-size: 12px
+}
+
+.uc-common-login #common-login #uc-login .error span {
+    width: 0;
+    margin-bottom: 10px;
+    vertical-align: top
+}
+
+.uc-common-login #common-login #uc-login .visible-show {
+    display: block;
+    line-height: 1
+}
+
+.uc-common-login #common-login #uc-login .login-action {
+    padding: 0
+}
+
+.uc-common-login #common-login #uc-login .login-action .other {
+    margin: 14px 0 0
+}
+
+.uc-common-login #common-login #uc-login .login-action span {
+    display: none
+}
+
+.uc-common-login #common-login #uc-login .login-action .uc-register {
+    border: 0;
+    margin-right: 14px;
+    padding: 0
+}
+
+.uc-common-login #common-login .login-action, .uc-common-login #common-login .pass-form-item-submit {
+    padding: 0;
+    margin: 0;
+    background: #fff
+}
+
+.uc-common-login #common-login .login-action input, .uc-common-login #common-login .pass-form-item-submit input {
+    width: 260px;
+    margin: 0;
+    padding: 0;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+    background: #0063ff;
+    height: 40px;
+    line-height: 40px;
+    font-size: 14px;
+    border: 0
+}
+
+.uc-common-login #common-login .login-action input:hover, .uc-common-login #common-login .pass-form-item-submit input:hover {
+    background: #3382ff
+}
+
+.uc-common-login #common-login .login-action input:active, .uc-common-login #common-login .pass-form-item-submit input:active {
+    background: #004fcc
+}
+
+.uc-common-login #common-login .pass-reglink {
+    margin: 14px 0 0;
+    float: left;
+    border: 0
+}
+
+.uc-common-login #common-login .pass-fgtpwd {
+    margin: 14px 0 0;
+    float: right
+}
+
+.uc-common-login #common-login .tang-pass-login-phoenix {
+    display: none
+}
+
+.uc-common-login #common-login .tang-pass-sms {
+    margin-top: 24px
+}
+
+.uc-common-login #common-login .tang-pass-sms form {
+    background: #fff
+}
+
+.uc-common-login #common-login .tang-pass-sms-title, .uc-common-login #common-login .tang-pass-sms form label {
+    display: none
+}
+
+.uc-common-login #common-login .pass-sms-link-back, .uc-common-login #common-login .tang-pass-sms-agreement, .uc-common-login #common-login .tang-pass-sms-tip {
+    font-size: 12px
+}
+
+.uc-common-login #common-login .tang-pass-sms-agreement {
+    margin: 14px 0 0;
+    float: left
+}
+
+.uc-common-login #common-login .pass-sms-link-back {
+    margin: 14px 0 0;
+    float: right
+}
+
+.uc-common-login #common-login .pass-generalErrorWrapper {
+    position: relative;
+    top: -5px;
+    left: 0
+}
+
+.uc-common-login #common-login .pass-clearbtn-smsVerifyCode {
+    display: none !important
+}
+
+.uc-common-login #common-login .tip-wrap .tip-info {
+    border-top: 1px solid #e5e5e5;
+    margin-top: 10px;
+    padding-top: 10px;
+    color: #666;
+    line-height: 20px
+}
+
+.uc-common-login #common-login .tip-wrap .tang-pass-pop-login .tang-pass-pop-login-changeWrapper {
+    position: relative;
+    z-index: 22
+}
+
+.uc-common-login #common-login .tip-wrap .tang-pass-pop-login .tang-pass-pop-login-change {
+    width: 28px;
+    height: 28px;
+    position: absolute;
+    right: -30px;
+    bottom: -20px;
+    cursor: pointer;
+    background: no-repeat 0 0;
+    -moz-background-size: 28px 28px;
+    background-size: 28px 28px;
+    z-index: 21
+}
+
+.uc-common-login #common-login .tip-wrap .tang-pass-pop-login .tang-pass-pop-qrcodeLogin {
+    background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADgAAAA4BAMAAABaqCYtAAAAD1BMVEUAAAAAAAAAAAAAAAAAAABPDueNAAAABXRSTlMARIABCCDoaygAAACGSURBVHgBvdGxCQMxGENhi9wEGkETeAQX3n+mwIU/mGBedc5rv05qkAgNpgAaUAE0YU5gB9QANKACaEAF0ICvOWd/fKH5aYtKtUEDKoAGVAAN+P/UWu52lxlQATSgAmjAKysmz2AH1PjiaNcPGlABNKACaMC7BatzqFSFy2UGVAANqAAa8A0QQk8qFsQUegAAAABJRU5ErkJggg==)
+}
+
+.uc-common-login #common-login .tip-wrap .tang-pass-pop-login .tang-pass-pop-normalLogin {
+    background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADgAAAA4BAMAAABaqCYtAAAAD1BMVEUAAAAAAAAAAAAAAAAAAABPDueNAAAABXRSTlMACESAATzIo58AAAB4SURBVHgB5dIxDQMxFATR0+oA2BgWwhIIf1T5qWI5+lO5iHTTvnauBzSrzpSqQwMqgAZUAA14z+qDbadRqUaDBlQADagAGlABNKACaEAF0IAKoAEVQAMqgAa859rr0GBzb0Flb0EDKoAGVAAN+C3JuJpOY34bf4hvNkRrIrRcnTkAAAAASUVORK5CYII=)
+}
+
+.uc-common-login #common-login .tang-pass-qrcode-content {
+    padding-top: 24px;
+    height: 180px;
+    overflow: hidden;
+    text-align: center
+}
+
+.uc-common-login #common-login .tang-pass-qrcode-imgWrapper img {
+    width: 138px;
+    height: 138px
+}
+
+.uc-common-login #common-login .close-common-login-layer {
+    background: no-repeat 50% url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAUCAQAAAAngNWGAAAAxUlEQVQoz5XRLQ7CQBCG4YGEhhAUHABViUMjOQCehBSJJkEguQOCQ2BQJAQ0ecMh8IRaQsog+pNtOytYtTvzrPk+kX8OXUIanl2fQX4d8kQ50THYnDfKNn3sUBTlWqVEfFGUD4GIsMpghRZMedAUEQKOdeqwF6P8b406LC6YQZceVqPqZSa1WUbvDhz7G4pIHHixKqgzs4Iyizl7aYmN7ArEitekTKx4S/SQjvZ2bg5NaIsIM1+8Bb3lgykbQjOyFgvW9ER+fxpQey0PzhkAAAAASUVORK5CYII=);
+    -moz-background-size: 10px 10px;
+    background-size: 10px 10px;
+    width: 10px;
+    height: 10px;
+    right: 20px;
+    top: 20px
+}
+
+.uc-common-login #common-login .close-common-login-layer:hover {
+    background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAUCAQAAAAngNWGAAAAxUlEQVQoz5XRLQ7CQBCG4YGEhhAUHABViXrRSA6AJyFFokkQSO6A4BAYFAkBjeAQeEItIWUQ/cm2nRWs2p151nyfyD+HLiENz67PIL8OeaKc6Bhszhtlmz52KIpyrVIivijKh0BEWGWwQgumPGiKCAHHOnXYi1H+t0YdFhfMoEsPq1H1MpPaLKN3B479DUUkDrxYFdSZWUGZxZy9tMRGdgVixWtSJla8JXpIR3s7N4cmtEWEmS/egt7ywZQNoRlZiwVreiI/DqzMV9zYyKEAAAAASUVORK5CYII=)
+}
+
+.uc-common-login #common-login .pass-generalError, .uc-common-login #common-login .pass-generalError-error {
+    color: #e73828;
+    font-size: 12px
+}
+
+.uc-common-login #common-login .pass-generalError-error a, .uc-common-login #common-login .pass-generalError a {
+    color: #0063ff
+}
+
+.uc-common-login #common-login input:-webkit-autofill, .uc-common-login #common-login select:-webkit-autofill, .uc-common-login #common-login textarea:-webkit-autofill {
+    color: #333 !important;
+    -webkit-box-shadow: 0 0 0 50px #fff inset
+}
+
+.uc-common-login #common-login input::-moz-placeholder, .uc-common-login #common-login input::-webkit-input-placeholder {
+    color: #999
+}
+
+.uc-common-login #common-login .pass-form-logo, .uc-common-login #common-login .tang-pass-footerBar {
+    display: none
+}
+
+.uc-common-login #common-login .tang-pass-qrcode {
+    text-align: center
+}
+
+.uc-common-login #common-login .tang-pass-qrcode-imgWrapper {
+    margin: 0 auto;
+    width: 136px
+}
+
+.uc-common-login #common-login ul.tang-pass-qrcode-ullist {
+    display: block;
+    padding: 16px 0;
+    overflow: hidden;
+    *padding-bottom: 5px
+}
+
+.uc-common-login #common-login li.tang-pass-qrcode-list {
+    color: #999;
+    font-size: 12px;
+    float: left;
+    width: 33%
+}
+
+.uc-common-login #common-login .tang-pass-qrcode-list span.tang-pass-qrcode-list-aq, .uc-common-login #common-login .tang-pass-qrcode-list span.tang-pass-qrcode-list-gx, .uc-common-login #common-login .tang-pass-qrcode-list span.tang-pass-qrcode-list-bj {
+    width: 12px;
+    height: 18px;
+    display: inline-block;
+    position: relative;
+    top: 6px;
+    margin-right: 8px;
+    background: url(https://passport.baidu.com/passApi/img/loginv4.png) no-repeat;
+    _background: url(https://passport.baidu.com/passApi/img/loginv4.gif) no-repeat
+}
+
+.uc-common-login #common-login .tang-pass-qrcode-list span.tang-pass-qrcode-list-aq {
+    background-position: -9px -3px
+}
+
+.uc-common-login #common-login .tang-pass-qrcode-list span.tang-pass-qrcode-list-gx {
+    background-position: -29px -3px
+}
+
+.uc-common-login #common-login .tang-pass-qrcode-list span.tang-pass-qrcode-list-bj {
+    background-position: -51px -3px
+}
+
+.uc-common-login #common-login .Qrcode-status-con {
+    width: 138px;
+    height: 138px;
+    border: 1px solid #ecedee;
+    padding: 9px;
+    text-align: center;
+    color: #000;
+    font-size: 14px;
+    display: none;
+    margin: 0 auto;
+    line-height: 20px;
+    -webkit-transition: all .3s liner;
+    -moz-transition: all .3s liner;
+    transition: .3s liner;
+    -webkit-transform: translateX(0);
+    -moz-transform: translateX(0);
+    -ms-transform: translateX(0);
+    transform: translateX(0)
+}
+
+.uc-common-login #common-login .Qrcode-animation {
+    -webkit-animation: marginLeft .3s linear;
+    -moz-animation: marginLeft .3s linear;
+    animation: marginLeft .3s linear;
+    -webkit-transition: all .3s liner;
+    -moz-transition: all .3s liner;
+    transition: .3s liner;
+    -webkit-transform: translateX(-49px);
+    -moz-transform: translateX(-49px);
+    -ms-transform: translateX(-49px);
+    transform: translateX(-49px)
+}
+
+.uc-common-login #common-login .Qrcode-animationRight {
+    -webkit-animation: marginRight .3s linear;
+    -moz-animation: marginRight .3s linear;
+    animation: marginRight .3s linear;
+    -webkit-transition: all .3s liner;
+    -moz-transition: all .3s liner;
+    transition: .3s liner;
+    -webkit-transform: translateX(0);
+    -moz-transform: translateX(0);
+    -ms-transform: translateX(0);
+    transform: translateX(0)
+}
+
+@-webkit-keyframes marginLeft {
+    0% {
+        -webkit-transform: translateX(0)
+    }
+    100% {
+        -webkit-transform: translateX(-49px)
+    }
+}
+
+@-moz-keyframes marginLeft {
+    0% {
+        -moz-transform: translateX(0)
+    }
+    100% {
+        -moz-transform: translateX(-49px)
+    }
+}
+
+@-ms-keyframes marginLeft {
+    0% {
+        -ms-transform: translateX(0)
+    }
+    100% {
+        -ms-transform: translateX(-49px)
+    }
+}
+
+@keyframes marginLeft {
+    0% {
+        -webkit-transform: translateX(0);
+        -moz-transform: translateX(0);
+        transform: translateX(0)
+    }
+    100% {
+        -webkit-transform: translateX(-49px);
+        -moz-transform: translateX(-49px);
+        transform: translateX(-49px)
+    }
+}
+
+@-webkit-keyframes marginRight {
+    0% {
+        -webkit-transform: translateX(-49px)
+    }
+    100% {
+        -webkit-transform: translateX(0)
+    }
+}
+
+@-moz-keyframes marginRight {
+    0% {
+        -moz-transform: translateX(-49px)
+    }
+    100% {
+        -moz-transform: translateX(0)
+    }
+}
+
+@-ms-keyframes marginRight {
+    0% {
+        -ms-transform: translateX(-49px)
+    }
+    100% {
+        -ms-transform: translateX(0)
+    }
+}
+
+@keyframes marginRight {
+    0% {
+        -webkit-transform: translateX(-49px);
+        -moz-transform: translateX(-49px);
+        transform: translateX(-49px)
+    }
+    100% {
+        -webkit-transform: translateX(0);
+        -moz-transform: translateX(0);
+        transform: translateX(0)
+    }
+}
+
+.uc-common-login #common-login .Qrcode-status-animation {
+    background: url(https://passport.baidu.com/passApi/img/qrcodeLoginGuide.png) no-repeat center;
+    height: 156px;
+    width: 125px;
+    position: absolute;
+    top: 0;
+    *top: 72px;
+    left: 150px;
+    *left: 200px;
+    display: none
+}
+
+.uc-common-login #common-login .Qrcode-status-guideAnim {
+    display: block
+}
+
+body .pass-armorwidget-wrapper {
+    z-index: 10200
+}
+
+#common-login {
+    -webkit-transform: translateZ(120px);
+    -moz-transform: translateZ(120px);
+    transform: translateZ(120px)
+}
+
+#common-login .login-info-h2 {
+    text-align: center;
+    margin: 0;
+    margin-bottom: 20px;
+    font-size: 18px;
+    color: #333;
+    display: none;
+    color: #7f7f7f;
+    margin-bottom: 10px
+}
+
+.pass-suggestion-list {
+    position: relative;
+    z-index: 100;
+    position: absolute;
+    top: 40px;
+    width: 100%;
+    border: 1px solid #ebebeb;
+    -webkit-box-shadow: 0 0 3px 0 #ebebeb;
+    -moz-box-shadow: 0 0 3px 0 #ebebeb;
+    box-shadow: 0 0 3px 0 #ebebeb;
+    background: #fff;
+    max-height: 200px;
+    overflow-y: auto
+}
+
+.pass-suggestion-list .pass-item-suggsetion {
+    height: 40px;
+    line-height: 40px;
+    padding: 0 10px
+}
+
+.pass-suggestion-list .pass-item-suggsetion a {
+    color: #333
+}
+
+.pass-suggestion-list .pass-item-suggsetion:hover {
+    background: #eee
+}
